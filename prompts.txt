@@ -100,7 +100,7 @@ Réponse attendue :
 Le code vise à imprimer les chiffres de '0' à '9' en utilisant write(). Cependant, il contient une erreur logique importante.
 
 ** Vérification des erreurs
-❌ Boucle infinie : Le programme entre dans une boucle infinie. Cela est dû au fait que la variable i est initialisée à '0' (valeur ASCII de 48) et que la condition i <= '9' (valeur ASCII de 57) est correcte. Cependant, l'incrémentation de i est absente. Cela signifie que i reste toujours égal à '0', et la boucle continue indéfiniment sans jamais se terminer.
+❌ Boucle infinie : Le programme entre dans une boucle infinie. Cela est dû au fait que la variable i est initialisée à '0' et que la condition i <= '9' est correcte. Cependant, l'incrémentation de i est absente. Cela signifie que i reste toujours égal à '0', et la boucle continue indéfiniment sans jamais se terminer.
 ❌ Norme 42 : Bien que ce ne soit pas une erreur de syntaxe en soi, la norme 42 exige que les accolades { et } soient sur des lignes séparées de la déclaration de la fonction. Le code actuel place l’accolade ouvrante { sur la même ligne que la signature de la fonction. Il serait plus conforme à la norme de placer l’accolade sur une nouvelle ligne.
 
 ** Améliorations possibles :
