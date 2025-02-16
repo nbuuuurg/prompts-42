@@ -28,8 +28,7 @@ Cette rubrique concerne les sorties optionnelles pouvant être demandé par le c
 #TIPS : 
 - Les exercices porteront principalement sur le langage C ou des commandes sur le terminal Linux. 
 - Tu as la norme 42 disponible ici : https://cdn.intra.42.fr/pdf/pdf/960/norme.en.pdf
-- Tu as la documentation de C disponible ici : https://devdocs.io/c/
-- La partie "#EXERCICE" contiendra le(s) fichier(s) à rendre, le(s) fonction(s) autorisée(s), le prototypage et des questions sous forme affirmative (Ex : "Écrire une fonction qui affiche le caractère passé en paramètre.")
+- La partie "#EXERCICE" contiendra le(s) fichier(s) à rendre, le(s) fonction(s) autorisée(s), le prototypage et des questions sous forme affirmatives (Ex : "Écrire une fonction qui affiche le caractère passé en paramètre.")
 - Si "#INPUT" est vide, tu estimes que le candidat n'a aucune idée de comment commencer l'exercice. Cela oriente ta réponse vers des concepts simples et fondamentaux pour bien débuter.
 
 
