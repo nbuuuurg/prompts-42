@@ -1,0 +1,308 @@
+Piscine C
+Shell 01
+
+Résumé: Ce document est le sujet du module Shell 01 de la piscine C de 42.
+
+Table des matières
+I
+
+Consignes
+
+2
+
+II
+
+Préambule
+
+3
+
+III
+
+Exercice 00 : Exam machine
+
+4
+
+IV
+
+Exercice 01 : print_groups
+
+5
+
+V
+
+Exercice 02 : find_sh
+
+6
+
+VI
+
+Exercice 03 : count_files
+
+7
+
+VII
+
+Exercice 04 : MAC
+
+8
+
+VIII
+
+Exercice 05 : Can you create it ?
+
+9
+
+IX
+
+Exercice 06 : Skip
+
+10
+
+X
+
+Exercice 07 : r_dwssap
+
+11
+
+XI
+
+Exercice 08 : add_chelou
+
+12
+
+1
+
+Chapitre I
+Consignes
+• Seule cette page servira de référence : ne vous fiez pas aux bruits de couloir.
+• Relisez bien le sujet avant de rendre vos exercices. A tout moment le sujet peut
+changer.
+• Les exercices sont très précisément ordonnés du plus simple au plus complexe.
+En aucun cas nous ne porterons attention ni ne prendrons en compte un exercice
+complexe si un exercice plus simple n’est pas parfaitement réussi.
+• Attention aux droits de vos fichiers et de vos répertoires.
+• Vous devez suivre la procédure de rendu pour tous vos exercices.
+• Vos exercices seront corrigés par vos camarades de piscine.
+• En plus de vos camarades, vous serez corrigés par un programme appelé la Moulinette.
+• La Moulinette est très stricte dans sa notation. Elle est totalement automatisée.
+Il est impossible de discuter de sa note avec elle. Soyez donc rigoureux !
+• Les exercices shell doivent s’exécuter avec /bin/sh.
+• Vous ne devez laisser dans votre répertoire aucun autre fichier que ceux explicitement specifiés par les énoncés des exercices.
+• Vous avez une question ? Demandez à votre voisin de droite. Sinon, essayez avec
+votre voisin de gauche.
+• Votre manuel de référence s’appelle Google / man / Internet / ....
+• Pensez à discuter sur le forum Piscine de votre Intra, ainsi que sur le slack de votre
+Piscine !
+• Lisez attentivement les exemples. Ils pourraient bien requérir des choses qui ne
+sont pas autrement précisées dans le sujet...
+
+2
+
+Chapitre II
+Préambule
+Voici ce que Wikipédia a à dire à propos de la loutre :
+La Loutre d’Europe ou Loutre européenne (Lutra lutra), souvent qualifiée de
+loutre commune dans les pays d’Europe où elle est présente, est un mammifère
+carnivore semi-aquatique et principalement nocturne, de la famille des
+Mustélidés (sous-famille Lutrinés). Elle est l’une des trois espèces de loutres
+se rattachant au genre Lutra. En France, on ne trouve que cette seule espèce de
+loutre.
+Sa hauteur est d’environ 30 cm au garrot. Son pelage, brun foncé, est composé de
+deux couches : le poil de bourre, court, très fin, dense et laineux ; et le poil
+de jarre, long, lisse, brillant et imperméable.
+Excellente nageuse, elle dispose de pattes palmées, d’un corps allongé (60 à 80
+cm en moyenne, auquel il faut ajouter une queue épaisse à la base et s’effilant
+vers l’extrémité de 30 à 40 cm de longueur), pour un poids allant de 5 à 15 kg.
+Elle vit au bord des cours d’eau (ruisseaux, rivières et même fleuves), jusqu’à
+une altitude de 1300 m, dans les marais et parfois sur les côtes marines. Elle
+est habituellement solitaire, occupant un territoire de 5 à 15 km de rives le
+long d’un cours d’eau (parfois davantage) ou de 20 à 30 km2 en zone de marais.
+Elle emprunte régulièrement les mêmes passages sur la berge pour se mettre à
+l’eau : les "coulées". Lorsqu’elle sort de l’eau, elle se roule dans l’herbe
+pour essuyer sa fourrure, sur des zones reconnaissables à l’herbe couchée et
+appelées "places de ressui".
+Elle fait sa tanière (qu’on appelle une "catiche", de l’ancien français
+"se catir" = se blottir, se cacher) entre les racines des arbres des berges des
+cours d’eau ou dans d’autres cavités (cavité rocheuse, tronc creux, terrier
+d’une autre espèce). La catiche contient souvent une entrée plus ou moins
+dissimulée au-dessous du niveau d’eau et un conduit d’aération.
+C’est mignon, une loutre.
+
+3
+
+Chapitre III
+Exercice 00 : Exam machine
+Exercice : 00
+Exam machine
+
+• Dans la semaine, vous pourrez vous inscrire à l’exam de vendredi dans l’Agenda,
+pensez-y.
+• Vous devez également vous inscrire au projet Exam00.
+• Vérifiez que vous êtes bien inscrit à l’exam machine de vendredi (à la fois à l’event
+ET au projet !).
+• Vérifiez que vous avez vérifié que vous étiez inscrit (à l’event ET au projet ! Oui,
+les deux !).
+
+4
+
+Chapitre IV
+Exercice 01 : print_groups
+Exercice : 01
+print_groups.sh
+Dossier de rendu : ex01/
+Fichiers à rendre : print_groups.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande qui détermine et affiche la liste des groupes dans
+lesquels est membre le login spécifié dans la variable d’environnement FT_USER,
+séparés par des virgules sans espaces.
+• Exemples :
+◦ avec FT_USER=nours, le résultat est "god,root,admin,master,nours,bocal"
+(sans les guillemets)
+$>./print_groups.sh
+god,root,admin,master,nours,bocal$>
+
+◦ avec FT_USER=daemon, le résultat est "daemon,bin" (sans les guillemets)
+$>./print_groups.sh
+daemon,bin$>
+
+man id
+
+5
+
+Chapitre V
+Exercice 02 : find_sh
+Exercice : 02
+find_sh.sh
+Dossier de rendu : ex02/
+Fichiers à rendre : find_sh.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande qui cherche dans le répertoire courant et dans tous
+ses sous-répertoires tous les fichiers dont le nom se termine par ".sh" (sans les
+guillemets) et n’affiche que leurs noms, sans le .sh.
+• Exemple de sortie :
+$>./find_sh.sh | cat -e
+find_sh$
+file1$
+file2$
+file3$
+$>
+
+6
+
+Chapitre VI
+Exercice 03 : count_files
+Exercice : 03
+count_files.sh
+Dossier de rendu : ex03/
+Fichiers à rendre : count_files.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande qui affiche le nombre de fichiers réguliers et de
+répertoires dans le répertoire courant et tous ses sous-répertoires, y compris le "."
+du répertoire de départ.
+• Exemple de sortie :
+$>./count_files.sh | cat -e
+42$
+$>
+
+7
+
+Chapitre VII
+Exercice 04 : MAC
+Exercice : 04
+MAC.sh
+Dossier de rendu : ex04/
+Fichiers à rendre : MAC.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande qui affiche les adresses MAC de votre machine.
+Chaque adresse sera suivi d’un retour à la ligne.
+
+man ifconfig
+
+8
+
+Chapitre VIII
+Exercice 05 : Can you create it ?
+Exercice : 05
+Can you create it ?
+Dossier de rendu : ex05/
+Fichiers à rendre : "\?$*’MaRViN’*$?\"
+Fonctions Autorisées : Aucune
+
+• Créer un fichier contenant uniquement "42" et RIEN d’autre.
+• Il se nommera :
+"\?$*'MaRViN'*$?\"
+
+• Exemple :
+$>ls -lRa *MaRV* | cat -e
+-rw---xr-- 1 75355 32015 2 Oct 2 12:21 "\?$*'MaRViN'*$?\"$
+$>
+
+9
+
+Chapitre IX
+Exercice 06 : Skip
+Exercice : 06
+skip.sh
+Dossier de rendu : ex06/
+Fichiers à rendre : skip.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande et qui affiche un ls -l une ligne sur deux, à partir
+de la première.
+
+10
+
+Chapitre X
+Exercice 07 : r_dwssap
+Exercice : 07
+r_dwssap.sh
+Dossier de rendu : ex07/
+Fichiers à rendre : r_dwssap.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande qui affiche la sortie d’un cat /etc/passwd, en
+retirant les commentaires, une ligne sur deux en partant de la seconde en inversant
+chaque login et en triant par ordre alphabétique inversé, en ne conservant que les
+logins compris entre FT_LINE1 et FT_LINE2 inclus, séparés par des ", " (sans
+les guillemets), et terminés par un ".".
+• Exemple : Entre les lignes 7 et 15, le résultat sera quelque chose du genre :
+$> ./r_dwssap.sh
+sstq_, sorebrek_brk_, soibten_, sergtsop_, scodved_, rlaxcm_, rgmecived_, revreswodniw_,
+revressta_.$>
+
+Respectez strictement l’ordre de l’énoncé.
+
+11
+
+Chapitre XI
+Exercice 08 : add_chelou
+Exercice : 08
+add_chelou.sh
+Dossier de rendu : ex08/
+Fichiers à rendre : add_chelou.sh
+Fonctions Autorisées : Aucune
+
+• Écrire une ligne de commande qui prend les nombres contenus dans les variables
+FT_NBR1 en base ’\"?! et FT_NBR2 en base mrdoc et qui affiche la somme des deux
+en base gtaio luSnemf
+◦ Exemple 1 :
+FT_NBR1=\'?"\"'\
+FT_NBR2=rcrdmddd
+
+◦ La somme est :
+Salut
+
+◦ Exemple 2 :
+FT_NBR1=\"\"!\"\"!\"\"!\"\"!\"\"!\"\"
+FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
+
+◦ La somme est :
+Segmentation fault
+
+12
+
+
